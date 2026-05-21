@@ -53,7 +53,7 @@ export default function DashboardCharts({
                 color: "#eef2ff",
                 fontSize: 12,
               }}
-              formatter={(value: number, name: string) => [value, name]}
+              formatter={(value, name) => [value, name]}
             />
             <Legend
               formatter={(value) => (
