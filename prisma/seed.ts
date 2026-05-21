@@ -3,9 +3,9 @@ import { PrismaClient } from "../app/generated/prisma/client";
 import bcrypt from "bcryptjs";
 import { createId } from "@paralleldrive/cuid2";
 
-const url = process.env.DATABASE_URL ?? "file:./dev.db";
-const adapter = new PrismaLibSql({ url } as never);
-const prisma = new PrismaClient({ adapter } as never);
+const url     = process.env.DATABASE_URL ?? "file:./dev.db";
+const adapter = new PrismaLibSql({ url, authToken: process.env.TURSO_AUTH_TOKEN } as never);
+const prisma  = new PrismaClient({ adapter } as never);
 
 // ── Structure définie par le client (issue de l'image DWG) ───────────────────
 // BLOC1 : 4 immeubles × 2 apts = 8 apts/étage  (IM.A IM.B IM.C IM.D)
