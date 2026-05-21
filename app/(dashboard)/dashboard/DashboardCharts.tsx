@@ -91,7 +91,7 @@ export default function DashboardCharts({
                   borderRadius: "8px",
                   fontSize: 12,
                 }}
-                formatter={(value: number) => [MAD(value), "CA"]}
+                formatter={(value) => [MAD(Number(value)), "CA"]}
                 labelStyle={{ color: "#eef2ff" }}
               />
               <Bar dataKey="revenue" fill="#eab308" radius={[4, 4, 0, 0]} maxBarSize={40} />
