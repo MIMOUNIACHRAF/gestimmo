@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut } from "next-auth/react";
+import Image from "next/image";
 import {
-  Building2,
   LayoutDashboard,
   Map,
   Home,
@@ -30,8 +30,8 @@ export default function Sidebar({ user }: { user: { name?: string | null; email?
       {/* Logo */}
       <div className="p-5 border-b border-[#1c2336]">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center shadow-lg shadow-blue-500/20">
-            <Building2 className="w-5 h-5 text-white" />
+          <div className="w-9 h-9 rounded-xl overflow-hidden bg-white flex items-center justify-center shadow-lg shadow-blue-500/20">
+            <Image src="/logo.jpg" alt="OTAB" width={36} height={36} className="object-contain" />
           </div>
           <div>
             <div className="text-white font-bold text-sm tracking-wide">GestImmo Pro</div>
