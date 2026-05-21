@@ -10,7 +10,7 @@ type Apartment = {
   id: string; number: string; type: string; surface: number; price: number; status: string;
   floor: { name: string; building: { name: string; bloc: { name: string } } };
   client: Client | null;
-  sale: { price: number; date: string; notes: string | null; user: { name: string } } | null;
+  sale: { price: number; date: Date | string; notes: string | null; user: { name: string } } | null;
 };
 
 const statusMap = {
