@@ -6,7 +6,7 @@ import { Search, Plus, User, Phone, Mail, Hash, X, Save } from "lucide-react";
 
 type Client = {
   id: string; name: string; phone: string; email: string | null; cin: string | null;
-  createdAt: string;
+  createdAt: Date | string;
   apartments: { id: string; number: string; status: string; floor: { building: { bloc: { name: string } } } }[];
   sales: { price: number }[];
 };
