@@ -4,7 +4,6 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { Lock, Mail, AlertCircle, Eye, EyeOff } from "lucide-react";
-import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -43,13 +42,11 @@ export default function LoginPage() {
         {/* Brand */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center mb-4">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/logo.jpg"
               alt="OTAB IMMOBILIÈRE"
-              width={160}
-              height={80}
-              className="object-contain rounded-xl"
-              style={{ background: "white", padding: "8px" }}
+              className="h-20 w-auto object-contain rounded-xl bg-white p-2"
             />
           </div>
           <h1 className="text-2xl font-bold text-white tracking-wide">GestImmo Pro</h1>

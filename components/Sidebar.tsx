@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut } from "next-auth/react";
-import Image from "next/image";
 import {
   LayoutDashboard,
   Map,
@@ -31,7 +30,8 @@ export default function Sidebar({ user }: { user: { name?: string | null; email?
       <div className="p-5 border-b border-[#1c2336]">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl overflow-hidden bg-white flex items-center justify-center shadow-lg shadow-blue-500/20">
-            <Image src="/logo.jpg" alt="OTAB" width={36} height={36} className="object-contain" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.jpg" alt="OTAB" className="w-full h-full object-contain" />
           </div>
           <div>
             <div className="text-white font-bold text-sm tracking-wide">GestImmo Pro</div>
